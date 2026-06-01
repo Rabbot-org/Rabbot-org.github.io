@@ -328,12 +328,14 @@
                 Bleib auf dem Laufenden.
             </p>
 
-            <div class="cta-section">
-                <div class="email-input-group">
-                    <input type="email" placeholder="Deine E-Mail-Adresse" id="emailInput">
-                    <button onclick="handleNotify()">Benachrichtig mich</button>
-                </div>
-            </div>
+            
+            <form action="https://formspree.io/f/xzdwnpbk" method="POST" class="cta-section">
+				<div class="email-input-group">
+					<input type="email" name="email" placeholder="Deine E-Mail-Adresse" required>
+					<button type="submit">Benachrichtig mich</button>
+				</div>
+			</form>
+          
 
             <div class="social-links">
                 <a href="https://linkedin.com" target="_blank">LinkedIn</a>
