@@ -334,6 +334,87 @@
   .partner-body strong { color: var(--ink); font-weight: 500; }
   .partner-body em { font-style: italic; color: var(--highlight); }
 
+  /* METHOD / PIPELINE */
+  .method-intro {
+    font-size: 14px;
+    line-height: 1.75;
+    color: var(--ink-muted);
+    font-weight: 300;
+    max-width: 620px;
+    margin-bottom: 22px;
+  }
+
+  .method-intro strong { color: var(--ink); font-weight: 500; }
+
+  .method {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border-top: 1.5px solid var(--ink);
+  }
+
+  .step {
+    padding: 16px 18px 4px 0;
+    position: relative;
+  }
+
+  .step + .step { padding-left: 18px; }
+
+  .step + .step::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 16px;
+    bottom: 8px;
+    width: 0.5px;
+    background: var(--rule);
+  }
+
+  .step-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: .14em;
+    color: var(--highlight);
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .step-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 19px;
+    letter-spacing: -.3px;
+    color: var(--ink);
+    margin-bottom: 7px;
+    line-height: 1.1;
+  }
+
+  .step-body {
+    font-size: 12px;
+    color: var(--ink-muted);
+    line-height: 1.65;
+    font-weight: 300;
+  }
+
+  .method-note {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: .06em;
+    color: var(--ink-faint);
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 0.5px solid var(--rule);
+  }
+
+  @media (max-width: 700px) {
+    .page { padding: 40px 28px 56px; }
+    .method { grid-template-columns: repeat(2, 1fr); }
+    .step:nth-child(3) { border-top: 0.5px solid var(--rule); }
+    .step:nth-child(4) { border-top: 0.5px solid var(--rule); }
+    .step:nth-child(3)::before { display: none; }
+    .pillars, .two-col { grid-template-columns: 1fr; }
+  }
+
   @media print {
     body { background: white; }
     .page { padding: 40px 48px; }
@@ -403,6 +484,37 @@
         <div class="pillar-body">Cross-border project delivery in DACH, Middle East, South Asia, and Eastern Europe. Cultural fluency. No surprises in the last mile.</div>
       </div>
     </div>
+  </div>
+
+  <!-- METHOD -->
+  <div class="section">
+    <div class="section-label">How we work</div>
+    <p class="method-intro">
+      Scouting that ends in a <strong>decision</strong>, not a report. The same structured pipeline used to run corporate innovation portfolios — search fields, radar, rated evaluation, stage gates — sized for a single engagement.
+    </p>
+    <div class="method">
+      <div class="step">
+        <span class="step-num">01</span>
+        <div class="step-title">Scan</div>
+        <div class="step-body">Search fields defined with you, then trends, technologies and startups tracked against them. A radar, not a newsletter.</div>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <div class="step-title">Evaluate</div>
+        <div class="step-body">Fixed criteria, rated by people who know the domain. Comparable scores instead of the loudest opinion in the room.</div>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <div class="step-title">Prototype</div>
+        <div class="step-body">Thin-sliced PoC or MVP on the shortlisted option. Built to answer one question, cheap enough to be wrong.</div>
+      </div>
+      <div class="step">
+        <span class="step-num">04</span>
+        <div class="step-title">Scale</div>
+        <div class="step-body">What survives moves into governed operation — architecture, compliance, and a documented decision trail.</div>
+      </div>
+    </div>
+    <div class="method-note">Stage-gated · portfolio-governed · auditable decision trail (EU AI Act-ready)</div>
   </div>
 
   <!-- PROOF -->
@@ -487,7 +599,7 @@
   <footer class="footer">
     <div class="footer-brand">Rabb<em>ot</em></div>
     <div class="footer-note">
-      Available from May 2026 · Engagements: advisory, interim, project<br>
+      Available now · Engagements: advisory, interim, project<br>
       <a href="impressum.html" style="color:var(--ink-muted);text-decoration:none;border-bottom:0.5px solid var(--rule);">Impressum · Datenschutz</a>
     </div>
   </footer>
